@@ -58,7 +58,7 @@ public class BoyerMoore {
     public static void main(String[] args) {
 
         String pat = "potato";
-        String txt = "potattotapotatotopotat";
+        String txt = "potatototapotatotoa";
 
         BoyerMoore booyer = new BoyerMoore(pat);
 
