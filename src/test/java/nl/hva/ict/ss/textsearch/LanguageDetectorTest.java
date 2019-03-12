@@ -1,5 +1,6 @@
 package nl.hva.ict.ss.textsearch;
 
+import LanguageDetector.LanguageDetector;
 import org.junit.Before;
 
 public class LanguageDetectorTest {

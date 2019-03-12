@@ -1,4 +1,4 @@
-package nl.hva.ict.ss.textsearch;
+package LanguageDetector;
 
 import java.io.InputStream;
 import java.util.Scanner;
