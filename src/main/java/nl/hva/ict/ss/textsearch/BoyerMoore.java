@@ -33,8 +33,7 @@ public class BoyerMoore {
             skip = 0;
 
             for (int j = M - 1; j >= 0; j--){
-                //todo
-                System.out.println("Skipped "+skip);
+                System.out.println("amount skipped:  "+skip);
                 System.out.println("text: " + pat.charAt(j) + " pattern: " + txt.charAt(i+j));
                 System.out.println("index : " + i + " pattern index  " + j + "\n");
                 count++;
@@ -42,16 +41,13 @@ public class BoyerMoore {
                 if (pat.charAt(j) != txt.charAt(i + j)) {
                     skip = j - right[txt.charAt(i + j)];
                     if (skip < 1) skip = 1;
-                    //todo
-                    System.out.println("amount skipped is: "+ skip );
+
+                    System.out.println("amount skipped: "+ skip );
                     break;
             }
-                else{
-                    System.out.println(j);
 
                 }
-                }
-            System.out.println("Amount of comparisons done is: " + count);
+            System.out.println("Amount of comparisons: " + count);
             if (skip == 0) return i; // found.
         }
 
@@ -62,13 +58,13 @@ public class BoyerMoore {
     public static void main(String[] args) {
 
         String pat = "potato";
-        String txt = "pototopotatapotatopot";
+        String txt = "potattotapotatotopotat";
 
         BoyerMoore booyer = new BoyerMoore(pat);
 
         System.out.println("text:    " + txt);
-        System.out.print("pattern: " + pat + "\n");
-
+        System.out.print("pattern: " + pat );
+        System.out.print("\n");
         int offset = booyer.search(txt);
         System.out.print("\n");
         System.out.println("text:    " + txt);
