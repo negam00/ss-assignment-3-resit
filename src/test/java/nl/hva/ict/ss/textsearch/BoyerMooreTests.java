@@ -15,28 +15,28 @@ public class BoyerMooreTests {
 
     @Test
     public void searchEndOfWordPattern(){
-        BoyerMoore boy = new BoyerMoore("pattern");
-        assertEquals("whereisthehidden".length(),boy.search("whereisthehiddenpattern"));
+        BoyerMoore boyerMoore = new BoyerMoore("pattern");
+        assertEquals("whereisthehidden".length(),boyerMoore.search("whereisthehiddenpattern"));
     }
 
 
     @Test
     public void searchMiddleOfWordPattern(){
-        BoyerMoore boy = new BoyerMoore("pattern");
-        assertEquals("whereistn".length(),boy.search("whereistnpatternhehidden"));
+        BoyerMoore boyerMoore = new BoyerMoore("pattern");
+        assertEquals("whereistn".length(),boyerMoore.search("whereistnpatternhehidden"));
     }
 
 
     @Test
     public void searchStartOfWordPattern(){
-        BoyerMoore boy = new BoyerMoore("pattern");
-        assertEquals("whereistn".length(),boy.search("whereistnpatternhehidden"));
+        BoyerMoore boyerMoore = new BoyerMoore("pattern");
+        assertEquals("whereistn".length(),boyerMoore.search("whereistnpatternhehidden"));
     }
 
     @Test
     public void searchHugeWordPattern(){
-        BoyerMoore boy = new BoyerMoore("ditiseenlangpattern");
-        assertEquals("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatter".length(),boy.search("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatterditiseenlangpatternditisditiseenlangditiseenlpattern"));
+        BoyerMoore boyerMoore = new BoyerMoore("ditiseenlangpattern");
+        assertEquals("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatter".length(),boyerMoore.search("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatterditiseenlangpatternditisditiseenlangditiseenlpattern"));
     }
 
 }
