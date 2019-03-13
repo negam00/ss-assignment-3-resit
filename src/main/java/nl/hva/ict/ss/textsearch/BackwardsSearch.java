@@ -17,7 +17,7 @@ public class BackwardsSearch {
     private final int R;     // radix
     private int[] skippedArray;     // Array that saves the skipped characters
     public static int searchComparisons;
-    private static int t;
+
 
     public BackwardsSearch(String pat) {
         //initialize radix and searchcomparsions
@@ -34,15 +34,16 @@ public class BackwardsSearch {
         }
 
         int counter = 0;
-         t = pat.length();
-
-        int reverseCounter = 0;
-        //Set every character to the number of letters it's last occurance from the first pattern character
-        for (int j = pat.length() - 1; j >= 0; j--) {
-            skippedArray[pat.charAt(j)] = reverseCounter;
-            System.out.println("letter " + pat.charAt(j) + " value = " + skippedArray[pat.charAt(j)]);
-            reverseCounter++;
+        int t = pat.length()-1;
+        while(0 <= t){
+        skippedArray[pat.charAt(t)] = counter;
+            System.out.println("Character:  " + pat.charAt(t) + " value: " + skippedArray[pat.charAt(t)]);
+            counter++;
+            t--;
         }
+
+
+
     }
 
 
