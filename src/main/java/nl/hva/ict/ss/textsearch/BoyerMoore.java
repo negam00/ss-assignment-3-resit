@@ -13,6 +13,8 @@ public class BoyerMoore {
         int M = pat.length();
         int R = 256;
         right = new int[R];
+
+
         for (int c = 0; c < R; c++)
             right[c] = -1;                // -1 for chars not in pattern
         for (int j = 0; j < M; j++) { // rightmost position for
@@ -55,6 +57,7 @@ public class BoyerMoore {
         // not found.
     }
 
+    //This method was taken from page 769 of the book : Algorithms 4th Edition by Robert Sedgewick, Kevin Wayne
     public static void main(String[] args) {
 
         String pat = "potato";
