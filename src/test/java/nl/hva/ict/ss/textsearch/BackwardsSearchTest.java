@@ -6,6 +6,7 @@
 //
 
 //todo deze klasse uncommenten, gecomment ivm error
+//todo missen standaard tests van school nog copy pastten uit yacobs bestand.
 
 //public class BackwardsSearchTest {
 //
@@ -13,7 +14,7 @@
 //    public void searchPattern(){
 //        BackwardsSearch backwardsSearch = new BackwardsSearch("potato");
 //        assertEquals("potototototota".length(), nl.hva.ict.ss.textsearch.backwardsSearch.search("pototototototapotatotototo"));
-//    }
+//    }s
 //
 //
 //    @Test
