@@ -1,17 +1,14 @@
 package LanguageDetector;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static java.util.regex.Pattern.MULTILINE;
-
 public class LanguageDetector {
     private String content; // Once an instance is created this will hold the complete content of the file.
     private String code;
-    private String docs;
+    private String comments;
     private int letterCount[];
 
     private String javaDoc;
@@ -21,40 +18,51 @@ public class LanguageDetector {
         Scanner sc = new Scanner(input);
         sc.useDelimiter("\\Z"); // EOF marker
         content = sc.next();
-        separateDocsFromCode();
+        findJavaDoc();
+        seperateCode();
     }
 
 
     //todo PATTER.COMMENT weggehaald, doet denk ik niks significatns maar als er problemen zijn is dat het.
 
-    public void separateDocsFromCode() {
+    public void findJavaDoc() {
         code = content.toLowerCase();
         StringBuilder generateText = new StringBuilder();
-
         Pattern findJavaDoc = Pattern.compile("(?s)\\/\\*.*?\\*\\/", Pattern.MULTILINE);
-
-
         Matcher docMatcher = findJavaDoc.matcher(code);
-        Matcher codeMatcher = findJavaDoc.matcher(code);
 
 
-        while (docMatcher.find()) {
+        while (docMatcher.find() == true) {
             generateText.append(docMatcher.group());
         }
 
+        comments = generateText.toString();
+        System.out.println("------------------JAVADOC-------------------------");
+        System.out.println(comments);
+        System.out.println("");
 
-        while (codeMatcher.find()) {
-            code = docMatcher.replaceAll("");
-        }
-        docs = generateText.toString();
-        System.out.println("DOCS:");
-        System.out.println(docs);
-        System.out.println("-----------------------------");
-        System.out.println("CODE:");
-        System.out.println(code);
-        System.out.println("-----------------------------");
 
     }
+
+
+  public void  seperateCode(){
+      code = content.toLowerCase();
+      StringBuilder generateText = new StringBuilder();
+      Pattern findJavaDoc = Pattern.compile("(?s)\\/\\*.*?\\*\\/", Pattern.MULTILINE);
+      Matcher docMatcher = findJavaDoc.matcher(code);
+      Matcher codeMatcher = findJavaDoc.matcher(code);
+
+      while (codeMatcher.find() == true) {
+          code = docMatcher.replaceAll("");
+      }
+
+      System.out.println("--------------------CODE STARTS HERE---------------------------");
+      System.out.println(code);
+
+  }
+
+
+
 }
 
 //    public void removeNonMethodCalls() {
@@ -130,7 +138,7 @@ public class LanguageDetector {
 //        }
 //        for (int i = 'a'; i <= 'z'; i++) {
 //            Pattern letterPattern = Pattern.compile("" + (char) i, Pattern.MULTILINE | Pattern.COMMENTS);
-//            Matcher letterMatcher = letterPattern.matcher(docs);
+//            Matcher letterMatcher = letterPattern.matcher(comments);
 //            while (letterMatcher.find()) {
 //                letterCount[i]++;
 //            }
