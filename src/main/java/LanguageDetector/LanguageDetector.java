@@ -1,6 +1,7 @@
 package LanguageDetector;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -74,7 +75,7 @@ public class LanguageDetector {
 
     }
 
-}
+
 //
 //    public void findMethodCalls() {
 //        ArrayList<String> methodCalls = new ArrayList<>();
@@ -121,50 +122,57 @@ public class LanguageDetector {
 //}
 //
 
-//    public void alphabetCounter() {
-//        ArrayList<String> characters = new ArrayList<>();
-//        ArrayList<Integer> count = new ArrayList<>();
-//
-//        int totalLetters = 0;
-//        String lettersInCountingOrder = "";
-//        //Makes array with 123 slots, only 97 to 122 will be used
-//        letterCount = new int[123];
-//        for (int i = 0; i < 123; i++) {
-//            letterCount[i] = 0; // -1 for chars not in pattern
-////            System.out.println(letterCount[i]);
-//        }
-//        for (int i = 'a'; i <= 'z'; i++) {
-//            Pattern letterPattern = Pattern.compile("" + (char) i, Pattern.MULTILINE | Pattern.COMMENTS);
-//            Matcher letterMatcher = letterPattern.matcher(comments);
-//            while (letterMatcher.find()) {
-//                letterCount[i]++;
-//            }
-//            System.out.println((char)i+":"+letterCount[i]);
-//        }
-//        System.out.println("------------------------------------");
-//        System.out.println("Letters in count order:");
-//        while (true) {
-//            int biggestNumber = 0;
-//            int biggestIndex = 0;
-//            for (int i = 0; i < 123; i++) {
-//                if (letterCount[i] > biggestNumber) {
-//                    biggestIndex = i;
-//                    biggestNumber = letterCount[i];
-//                }
-//            }
-//
-//            if (biggestNumber > 0) {
-//                totalLetters += biggestNumber;
-//                characters.add("" + (char) biggestIndex);
-//                count.add(biggestNumber);
-//                lettersInCountingOrder += "" + (char) biggestIndex;
-//
-//                letterCount[biggestIndex] = 0;
-//                System.out.println(lettersInCountingOrder);
-//            } else {
-////                System.out.println(lettersInCountingOrder);
-//                break;
-//            }
+    public void alphabetCounter() {
+
+        ArrayList counter = new ArrayList<>();
+        ArrayList chars = new ArrayList<>();
+
+
+        int total = 0;
+
+        String lettersOrderedToCount = "";
+
+        letterCount = new int[123]; // only 97 up to 122 will be used
+
+        for (int k = 0; k < letterCount.length; k++) {
+            letterCount[k] = 0;
+        }
+
+        for (int l = 'a'; l < 'z'; l++) {
+            Pattern pattern = Pattern.compile("" + (char) l, Pattern.MULTILINE | Pattern.COMMENTS);
+            Matcher matcher = pattern.matcher(javaDoc);
+
+            while (matcher.find()) {
+                letterCount[l]++;
+            }
+            System.out.print("\n" + letterCount[l]); //todo weghalen?
+
+        }
+
+
+        while (true) {
+            int highestNumber = 0;
+            int highestIndex = 0;
+
+            for (int j = 0; j < 123; j++) {
+                if (highestNumber < letterCount[j]) {
+                    highestIndex = j;
+                    highestNumber = letterCount[j];
+                }
+            }
+
+            if (0 < highestNumber) {
+                total += highestNumber;
+                chars.add((char) highestIndex);
+                lettersOrderedToCount += (char) highestIndex;
+
+                letterCount[highestIndex] = 0;
+            } else {
+                break;
+            }
+        }
+
+
 //        }
 //        System.out.println("------------------------------------");
 //        System.out.println("Total amount of letters: "+totalLetters);
@@ -217,8 +225,9 @@ public class LanguageDetector {
 //        System.out.println("------------------------------------");
 //
 //    }
-//
-//
-//}
-////a = 97
-////z = 122
+    }
+
+
+}
+//a = 97
+//z = 122
