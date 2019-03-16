@@ -20,10 +20,8 @@ public class LanguageDetector {
         content = sc.next();
         findJavaDoc();
         seperateCode();
+        findNotMethodCall();
     }
-
-
-    //todo PATTER.COMMENT weggehaald, doet denk ik niks significatns maar als er problemen zijn is dat het.
 
     public void findJavaDoc() {
         code = content.toLowerCase();
@@ -40,44 +38,43 @@ public class LanguageDetector {
         System.out.println("------------------JAVADOC-------------------------");
         System.out.println(comments);
         System.out.println("");
-
-
     }
 
 
-  public void  seperateCode(){
-      code = content.toLowerCase();
-      StringBuilder generateText = new StringBuilder();
-      Pattern findJavaDoc = Pattern.compile("(?s)\\/\\*.*?\\*\\/", Pattern.MULTILINE);
-      Matcher docMatcher = findJavaDoc.matcher(code);
-      Matcher codeMatcher = findJavaDoc.matcher(code);
+    public void seperateCode() {
+        code = content.toLowerCase();
+        StringBuilder generateText = new StringBuilder();
+        Pattern findJavaDoc = Pattern.compile("(?s)\\/\\*.*?\\*\\/", Pattern.MULTILINE);
+        Matcher docMatcher = findJavaDoc.matcher(code);
+        Matcher codeMatcher = findJavaDoc.matcher(code);
 
-      while (codeMatcher.find() == true) {
-          code = docMatcher.replaceAll("");
-      }
+        while (codeMatcher.find() == true) {
+            code = docMatcher.replaceAll("");
+        }
 
-      System.out.println("--------------------CODE STARTS HERE---------------------------");
-      System.out.println(code);
+        System.out.println("--------------------CODE STARTS HERE---------------------------");
+        System.out.println(code);
+    }
 
-  }
+
+    public void findNotMethodCall() {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println();
+        Pattern deleteNonCall = Pattern.compile("(void|public|static|while|private|for|if|else if).*?((\\()|(\\{))", Pattern.MULTILINE);
+        Matcher matchNonCall = deleteNonCall.matcher(code);
 
 
+        System.out.println("test 1:  " + code);
+        while (matchNonCall.find() == true) {
+            code = matchNonCall.replaceAll("");
+        }
+        System.out.println("test 2---------------------------: " + code);
+
+    }
 
 }
-
-//    public void removeNonMethodCalls() {
-//
-//
-//        Pattern removeNonFunctionCalls = Pattern.compile("(while|switch|for|if|public|static|private|protected|void)(.*?)((\\()|(\\{))", Pattern.MULTILINE | Pattern.COMMENTS);
-//        Matcher letterMatcher = removeNonFunctionCalls.matcher(code);
-////        System.out.println(code);
-//        while (letterMatcher.find()) {
-//            code = letterMatcher.replaceAll("");
-//        }
-////        System.out.println(code);
-//
-//
-//    }
 //
 //    public void findMethodCalls() {
 //        ArrayList<String> methodCalls = new ArrayList<>();
