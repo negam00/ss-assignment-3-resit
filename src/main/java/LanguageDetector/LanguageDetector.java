@@ -13,6 +13,7 @@ public class LanguageDetector {
     private int letterCount[];
 
     private String javaDoc;
+    private String[] englishFreq = {"etaoinshrdlcumwfgypbvkjxqzüäößàâáåã"};
 
 
     public LanguageDetector(InputStream input) {
@@ -173,16 +174,14 @@ public class LanguageDetector {
         }
 
 
-//        }
-//        System.out.println("------------------------------------");
+
+        System.out.println("------------------------------------");
+        //todo dit laatste gedeelte nog even bekijken
 //        System.out.println("Total amount of letters: "+totalLetters);
 //        LanguageList langTemp = new LanguageList();
 //        LanguageList langFinal = new LanguageList();
 //
-//        System.out.println("Total amount of languages to compare: "+langTemp.languageLettersList.size());
-//        ArrayList<LanguageLetters> languageList = langTemp.languageLettersList;
-//        ArrayList<LanguageLetters> finalList = langFinal.languageLettersList;
-//        System.out.println("------------------------------------");
+//      System.out.println("------------------------------------");
 //
 //        ArrayList<LanguageLetters> toRemove = new ArrayList<>();
 //        //while there are languageList left
@@ -223,8 +222,8 @@ public class LanguageDetector {
 //            System.out.println(characters.get(i) + " occurred " + (c / total) * 100 + "%");
 //        }
 //        System.out.println("------------------------------------");
-//
-//    }
+
+
     }
 
 
