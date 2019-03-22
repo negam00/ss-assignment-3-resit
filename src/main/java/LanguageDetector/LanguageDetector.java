@@ -26,6 +26,7 @@ public class LanguageDetector {
         findNotMethodCall();
     }
 
+
     public void findJavaDoc() {
         code = content.toLowerCase();
         StringBuilder generateText = new StringBuilder();
@@ -42,6 +43,7 @@ public class LanguageDetector {
         System.out.println(comments);
         System.out.println("");
     }
+
 
 
     public void seperateCode() {
@@ -61,21 +63,60 @@ public class LanguageDetector {
 
 
     public void findNotMethodCall() {
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println();
         Pattern deleteNonCall = Pattern.compile("(void|public|static|while|private|for|if|else if).*?((\\()|(\\{))", Pattern.MULTILINE);
         Matcher matchNonCall = deleteNonCall.matcher(code);
 
 
-        System.out.println("test 1:  " + code);
         while (matchNonCall.find() == true) {
             code = matchNonCall.replaceAll("");
         }
-        System.out.println("test 2---------------------------: " + code);
+    }
+
+
+    public void methodCallFinder(){
+        ArrayList<String> methodCallList = new ArrayList<>();
+        StringBuilder methodFoundBuilder = new StringBuilder();
+        ArrayList<String> secondaryFunc = new ArrayList<>();
+
+        Pattern findFunctionCalls = Pattern.compile("(([a-z0-9<>.\\[\\]])+?)\\s*(\\()(([a-z0-9<>\\-.,+/\\[\\\\\\]()\\s\"\'])*)(\\))", Pattern.MULTILINE) ;
+        Matcher matchFunctionCalls = findFunctionCalls.matcher(code);
+
+        while (matchFunctionCalls.find() == true){
+            methodCallList.add(matchFunctionCalls.group());
+        }
+        for (int i = 0; i < methodCallList.size(); i++) {
+            methodFoundBuilder.append(methodCallList.get(i));
+        }
+
+        Pattern secondaryFunctionPat = Pattern.compile("(\\(([a-z0-9<>\\-.,+/\\s\\[\\\\\\]()\"'])*?)\\s*(\\()(([a-z0-9<>\\-.,+/\\s*\\[\\\\\\]()\"'])*?)(\\))", Pattern.MULTILINE );
+        Matcher secondaryFuncMatcher = secondaryFunctionPat.matcher(code);
+
+
+        while(secondaryFuncMatcher.find() == true){
+            String secondaryFuncString =  secondaryFuncMatcher.group();
+            Matcher secondFuncMatching = findFunctionCalls.matcher(secondaryFuncString);
+
+            while(secondFuncMatching.find()==true){
+                secondaryFunc.add(secondFuncMatching.group());
+            }
+        }
+        System.out.println("found method list: \n");
+
+        for (int i = 0; i < methodCallList.size(); i++) {
+            System.out.println(methodCallList.get(i) );
+        }
+
+        for (int i = 0; i < secondaryFunc.size(); i++) {
+            System.out.println(secondaryFunc.get(i) );
+        }
+
+
+
 
     }
+
+
+
 
 
 //
