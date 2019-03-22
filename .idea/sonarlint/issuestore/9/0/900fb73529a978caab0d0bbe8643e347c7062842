@@ -1,34 +1,35 @@
 
-Wsquid:S18540"@Remove this useless assignment to local variable "generateText".(®ëÎ™
-Dsquid:S11255"(Remove the literal "true" boolean value.(É™ÿÜşÿÿÿÿ
-Qsquid:S1135•"2Complete the task associated to this TODO comment.(ï³ƒË8÷ÜÓ»˜-
-@squid:S1643¨"Use a StringBuilder instead.(€ÃÕÙıÿÿÿÿ8¢ÂÌ¼˜-
-bsquid:CommentedOutCodeLineQ"<This block of commented-out lines of code should be removed.(Üè’µ
-Ysquid:S1481†":Remove this unused "lettersOrderedToCount" local variable.(œÀÈ«8¸‹Í»˜-
-Nsquid:S1481„"*Remove this unused "total" local variable.(óË üÿÿÿÿ8”£±»˜-
+bsquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(€Âıç
+Hsquid:S14810"1Remove this unused "generateText" local variable.(®ëÎ™
+osquid:CommentedOutCodeLineÜ"<This block of commented-out lines of code should be removed.(§òô­şÿÿÿÿ8—ŸôŞ˜-
 gsquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+osquid:CommentedOutCodeLineº"<This block of commented-out lines of code should be removed.(›¨¦Æÿÿÿÿÿ8—ŸôŞ˜-
+gsquid:CommentedOutCodeLinem"<This block of commented-out lines of code should be removed.(Šˆà×ûÿÿÿÿ
+osquid:CommentedOutCodeLineÌ"<This block of commented-out lines of code should be removed.(ÑÃ»Šøÿÿÿÿ8—ŸôŞ˜-
+xsquid:S1450"ZRemove the "letterCount" field and declare it as a local variable in the relevant methods.(Š‰éÌ8ŠüÒº˜-
+Dsquid:S11255"(Remove the literal "true" boolean value.(É™ÿÜşÿÿÿÿ
+Qsquid:S1135³"2Complete the task associated to this TODO comment.(©‘‹¿8™”…Ü™-
+jsquid:CommentedOutCodeLine¼"<This block of commented-out lines of code should be removed.(€ğÓè8—ŸôŞ˜-
+zsquid:S1450"WRemove the "comments" field and declare it as a local variable in the relevant methods.(ƒÉˆÉúÿÿÿÿ8¸‹Í»˜-
+bsquid:CommentedOutCodeLineQ"<This block of commented-out lines of code should be removed.(Üè’µ
+@squid:S1643¨"Use a StringBuilder instead.(€ÃÕÙıÿÿÿÿ8¢ÂÌ¼˜-
+osquid:CommentedOutCodeLine¸"<This block of commented-out lines of code should be removed.(ı£¦ÿÿÿÿÿ8—ŸôŞ˜-
+_squid:S1854€";Remove this useless assignment to local variable "counter".(Ø™øÿÿÿÿ8³ÆÑ»˜-
+gsquid:CommentedOutCodeLinez"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+bsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(õšÄè
+osquid:CommentedOutCodeLineĞ"<This block of commented-out lines of code should be removed.(¾æ¦ãşÿÿÿÿ8—ŸôŞ˜-
+Ysquid:S1481†":Remove this unused "lettersOrderedToCount" local variable.(œÀÈ«8¸‹Í»˜-
 gsquid:CommentedOutCodeLineu"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
 Dsquid:S1125#"(Remove the literal "true" boolean value.(¥‘©İşÿÿÿÿ
-_squid:S1854€";Remove this useless assignment to local variable "counter".(Ø™øÿÿÿÿ8³ÆÑ»˜-
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨¤ú¬üÿÿÿÿ
-bsquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(€Âıç
-Psquid:S1481€",Remove this unused "counter" local variable.(Ø™øÿÿÿÿ8³ÆÑ»˜-
-Hsquid:S14810"1Remove this unused "generateText" local variable.(®ëÎ™
 ?squid:S1125H"(Remove the literal "true" boolean value.(”³òß
+Psquid:S1481€",Remove this unused "counter" local variable.(Ø™øÿÿÿÿ8³ÆÑ»˜-
 Osquid:S1197"8Move the array designator from the variable to the type.(Š‰éÌ
 Msquid:S1068"/Remove this unused "englishFreq" private field.(Î¨Âç8—é©Ş˜-
-xsquid:S1450"ZRemove the "letterCount" field and declare it as a local variable in the relevant methods.(Š‰éÌ8ŠüÒº˜-
-bsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(õšÄè
-gsquid:CommentedOutCodeLinem"<This block of commented-out lines of code should be removed.(Šˆà×ûÿÿÿÿ
-zsquid:S1450"WRemove the "comments" field and declare it as a local variable in the relevant methods.(ƒÉˆÉúÿÿÿÿ8¸‹Í»˜-
-gsquid:CommentedOutCodeLinez"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
-jsquid:CommentedOutCodeLine³"<This block of commented-out lines of code should be removed.(ºÎèæ8—ŸôŞ˜-
-osquid:CommentedOutCodeLine·"<This block of commented-out lines of code should be removed.(ı£¦ÿÿÿÿÿ8—ŸôŞ˜-
-osquid:CommentedOutCodeLine¹"<This block of commented-out lines of code should be removed.(›¨¦Æÿÿÿÿÿ8—ŸôŞ˜-
-jsquid:CommentedOutCodeLine»"<This block of commented-out lines of code should be removed.(€ğÓè8—ŸôŞ˜-
-osquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(êç­ğúÿÿÿÿ8—ŸôŞ˜-
-jsquid:CommentedOutCodeLineÉ"<This block of commented-out lines of code should be removed.(ï«˜·8—ŸôŞ˜-
-osquid:CommentedOutCodeLineË"<This block of commented-out lines of code should be removed.(ÑÃ»Šøÿÿÿÿ8—ŸôŞ˜-
-osquid:CommentedOutCodeLineÏ"<This block of commented-out lines of code should be removed.(¾æ¦ãşÿÿÿÿ8—ŸôŞ˜-
-jsquid:CommentedOutCodeLineØ"<This block of commented-out lines of code should be removed.(¦È÷›8—ŸôŞ˜-
-osquid:CommentedOutCodeLineÛ"<This block of commented-out lines of code should be removed.(§òô­şÿÿÿÿ8—ŸôŞ˜-
+Wsquid:S18540"@Remove this useless assignment to local variable "generateText".(®ëÎ™
+osquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(êç­ğúÿÿÿÿ8—ŸôŞ˜-
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨¤ú¬üÿÿÿÿ
+Nsquid:S1481„"*Remove this unused "total" local variable.(óË üÿÿÿÿ8”£±»˜-
+Qsquid:S1135•"2Complete the task associated to this TODO comment.(ï³ƒË8÷ÜÓ»˜-
+jsquid:CommentedOutCodeLine´"<This block of commented-out lines of code should be removed.(ºÎèæ8—ŸôŞ˜-
+jsquid:CommentedOutCodeLineÊ"<This block of commented-out lines of code should be removed.(ï«˜·8—ŸôŞ˜-
+jsquid:CommentedOutCodeLineÙ"<This block of commented-out lines of code should be removed.(¦È÷›8—ŸôŞ˜-

@@ -13,7 +13,8 @@ public class LanguageDetector {
     private int letterCount[];
 
     private String javaDoc;
-    private String[] englishFreq = {"etaoinshrdlcumwfgypbvkjxqzüäößàâáåã"};
+    private ArrayList<String> englishFreq = new ArrayList<>();
+    private ArrayList<String> remove = new ArrayList<>();
 
 
     public LanguageDetector(InputStream input) {
@@ -124,10 +125,8 @@ public class LanguageDetector {
 //
 
     public void alphabetCounter() {
-
         ArrayList counter = new ArrayList<>();
         ArrayList chars = new ArrayList<>();
-
 
         int total = 0;
 
@@ -173,10 +172,65 @@ public class LanguageDetector {
             }
         }
 
-
-
         System.out.println("------------------------------------");
-        //todo dit laatste gedeelte nog even bekijken
+
+        System.out.println("Totalletters: " + total); //todo weghalen?
+
+        englishFreq.add("e");
+        englishFreq.add("t");
+        englishFreq.add("a");
+        englishFreq.add("o");
+        englishFreq.add("i");
+        englishFreq.add("n");
+        englishFreq.add("s");
+        englishFreq.add("h");
+        englishFreq.add("r");
+        englishFreq.add("d");
+        englishFreq.add("l");
+        englishFreq.add("c");
+        englishFreq.add("u");
+        englishFreq.add("m");
+        englishFreq.add("w");
+        englishFreq.add("f");
+        englishFreq.add("g");
+        englishFreq.add("y");
+        englishFreq.add("p");
+        englishFreq.add("b");
+        englishFreq.add("v");
+        englishFreq.add("k");
+        englishFreq.add("j");
+        englishFreq.add("x");
+        englishFreq.add("q");
+        englishFreq.add("z");
+        englishFreq.add("ü");
+        englishFreq.add("ä");
+        englishFreq.add("ö");
+        englishFreq.add("ß");
+        englishFreq.add("à");
+        englishFreq.add("â");
+        englishFreq.add("á");
+        englishFreq.add("å");
+        englishFreq.add("ã");
+
+
+
+        int listCount = 0;
+        int langsize = englishFreq.size();
+
+
+        while(remove.size() > langsize ){
+
+            for (int j = 0;  j < langsize; j++) {
+//                if (englishFreq){
+//
+//                }
+            }
+
+            listCount++;
+
+        }
+
+
 //        System.out.println("Total amount of letters: "+totalLetters);
 //        LanguageList langTemp = new LanguageList();
 //        LanguageList langFinal = new LanguageList();
