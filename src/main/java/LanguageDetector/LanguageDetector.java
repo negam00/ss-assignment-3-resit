@@ -117,8 +117,6 @@ public class LanguageDetector {
 
 
 
-
-
 //
 //    public void findMethodCalls() {
 //        ArrayList<String> methodCalls = new ArrayList<>();
@@ -166,11 +164,12 @@ public class LanguageDetector {
 //
 
     public void alphabetCounter() {
-        ArrayList counter = new ArrayList<>();
+        ArrayList language = new ArrayList<>();
         ArrayList chars = new ArrayList<>();
 
         int total = 0;
 
+        // see freq the letter is used in total
         String lettersOrderedToCount = "";
 
         letterCount = new int[123]; // only 97 up to 122 will be used
@@ -217,6 +216,8 @@ public class LanguageDetector {
 
         System.out.println("Totalletters: " + total); //todo weghalen?
 
+
+
         englishFreq.add("e");
         englishFreq.add("t");
         englishFreq.add("a");
@@ -262,9 +263,9 @@ public class LanguageDetector {
         while(remove.size() > langsize ){
 
             for (int j = 0;  j < langsize; j++) {
-//                if (englishFreq){
-//
-//                }
+                if (englishFreq.get(listCount) != language.get(listCount)){
+                    System.out.printf("JavaDoc is not written in English. Too bad.");
+                }
             }
 
             listCount++;
@@ -307,17 +308,6 @@ public class LanguageDetector {
 //                break;
 //            }
 //        }
-//        System.out.println("------------------------------------");
-//
-//        System.out.println("Now printing all characters with their percentage of occurance");
-//        for (int i = 0; i < characters.size(); i++) {
-//
-//            Double c = Double.valueOf(count.get(i));
-//            Double total = Double.valueOf(totalLetters);
-//            System.out.println(characters.get(i) + " occurred " + (c / total) * 100 + "%");
-//        }
-//        System.out.println("------------------------------------");
-
 
     }
 

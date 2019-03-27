@@ -1,21 +1,20 @@
-//package nl.hva.ict.ss.textsearch;
-//import org.junit.Test;
-//import static org.junit.Assert.assertEquals;
-//import nl.hva.ict.ss.textsearch.BackwardsSearch;
-//
-//
+package nl.hva.ict.ss.textsearch;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import nl.hva.ict.ss.textsearch.BackwardsSearch;
 
-//todo deze klasse uncommenten, gecomment ivm error
-//todo missen standaard tests van school nog copy pastten uit yacobs bestand.
 
-//public class BackwardsSearchTest {
-//
-//    @Test
-//    public void searchPattern(){
-//        BackwardsSearch backwardsSearch = new BackwardsSearch("potato");
-//        assertEquals("potototototota".length(), nl.hva.ict.ss.textsearch.backwardsSearch.search("pototototototapotatotototo"));
-//    }s
-//
+
+/* todo geuncomment en heb de bovenste test even aangepast naar hoe het zou moeten zijn,
+ de anderen moeten nog aangepast worden*/
+public class BackwardsSearchTest {
+
+    @Test
+    public void searchPattern(){
+        BackwardsSearch backwardsSearch = new BackwardsSearch("potato");
+        assertEquals("potototototota".length(), backwardsSearch.findLocation("potato","pototototototapotatotototo"));
+    }
+
 //
 //    @Test
 //    public void searchEndOfWordPattern(){
@@ -42,5 +41,5 @@
 //        BackwardsSearch backwardsSearch = new BackwardsSearch("ditiseenlangpattern");
 //        assertEquals("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatter".length(),backwardsSearch.search("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatterditiseenlangpatternditisditiseenlangditiseenlpattern"));
 //    }
-//
-//}
+
+}
