@@ -14,7 +14,7 @@ public class LanguageDetectorTest {
 
     // Add your tests here. They are allowed to NOT use assertXxxx... :-)
     @Test
-    public void docsPrint (){
+    public void printTest (){
         System.out.println("");
     }
 }
