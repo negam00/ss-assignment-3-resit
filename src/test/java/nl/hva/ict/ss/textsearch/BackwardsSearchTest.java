@@ -1,7 +1,6 @@
 package nl.hva.ict.ss.textsearch;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-import nl.hva.ict.ss.textsearch.BackwardsSearch;
 
 public class BackwardsSearchTest {
 
