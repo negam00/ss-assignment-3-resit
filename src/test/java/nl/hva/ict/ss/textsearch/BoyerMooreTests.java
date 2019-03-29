@@ -35,8 +35,8 @@ public class BoyerMooreTests {
 
     @Test
     public void searchHugeWordPattern(){
-        BoyerMoore boy = new BoyerMoore("ditiseenlangpattern");
-        assertEquals("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatter".length(),boy.search("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatterditiseenlangpatternditisditiseenlangditiseenlpattern"));
+        BoyerMoore boyerMoore = new BoyerMoore("ditiseenlangpattern");
+        assertEquals("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatter".length(),boyerMoore.search("ditiseenlangditiseenlangpatditiseenlangpatditpatternlangpatternditpatterniseenpatterditiseenlangpatternditisditiseenlangditiseenlpattern"));
     }
 
 }

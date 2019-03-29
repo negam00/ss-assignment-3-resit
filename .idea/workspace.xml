@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="abb207fd-0a1c-488d-89ef-e2c8f1928193" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LanguageDetector/LanguageDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LanguageDetector/LanguageDetector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ss/textsearch/BackwardsSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ss/textsearch/BackwardsSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nl/hva/ict/ss/textsearch/BackwardsSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nl/hva/ict/ss/textsearch/BackwardsSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LanguageDetector/LanguageDetector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LanguageDetector/LanguageDetector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ss/textsearch/BackwardsSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ss/textsearch/BackwardsSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/nl/hva/ict/ss/textsearch/BackwardsSearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/nl/hva/ict/ss/textsearch/BackwardsSearchTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +29,17 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/LanguageDetector/LanguageDetector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,9 +49,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/nl/hva/ict/ss/textsearch/LanguageDetectorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/nl/hva/ict/ss/textsearch/BoyerMooreTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/LanguageDetector/LanguageDetector.java" />
         <option value="$PROJECT_DIR$/src/test/java/nl/hva/ict/ss/textsearch/BackwardsSearchTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/hva/ict/ss/textsearch/BackwardsSearch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/LanguageDetector/LanguageDetector.java" />
       </list>
     </option>
   </component>
@@ -55,9 +59,9 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="8" />
+    <option name="x" value="697" />
     <option name="y" value="23" />
-    <option name="width" value="875" />
+    <option name="width" value="983" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -132,8 +136,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,6 +289,8 @@
       <workItem from="1553790745491" duration="2418000" />
       <workItem from="1553812322542" duration="1119000" />
       <workItem from="1553851472220" duration="440000" />
+      <workItem from="1553852670854" duration="258000" />
+      <workItem from="1553873245762" duration="205000" />
     </task>
     <task id="LOCAL-00001" summary="eerste deel alfabet teller">
       <created>1552757959936</created>
@@ -314,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553727589549</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="tests gelijk gemaakt + backwards search gefixt">
+      <created>1553852922867</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1553852922867</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -350,7 +363,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23111000" />
+    <option name="totallyTimeSpent" value="23574000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,9 +375,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="8" y="23" width="875" height="1027" extended-state="0" />
+    <frame x="697" y="23" width="983" height="1027" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2184874" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3103082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -377,7 +390,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50056624" side_tool="true" weight="0.32941177" />
@@ -405,7 +418,8 @@
     <MESSAGE value="nou ysm speciaal voor jou staat ie er eindelijk op" />
     <MESSAGE value="even apfabet counter fixen" />
     <MESSAGE value="alphabet counter klaar??? denk ik not promising anything" />
-    <option name="LAST_COMMIT_MESSAGE" value="alphabet counter klaar??? denk ik not promising anything" />
+    <MESSAGE value="tests gelijk gemaakt + backwards search gefixt" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests gelijk gemaakt + backwards search gefixt" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/nl/hva/ict/ss/textsearch/LanguageDetectorTest.java">
@@ -422,20 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/hva/ict/ss/textsearch/BackwardsSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="62" column="28" selection-start-line="34" selection-start-column="4" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LanguageDetector/LanguageDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="168" column="10" selection-start-line="168" selection-start-column="10" selection-end-line="168" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/nl/hva/ict/ss/textsearch/BoyerMooreTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -447,6 +447,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/hva/ict/ss/textsearch/BackwardsSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LanguageDetector/LanguageDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
         </state>
       </provider>
     </entry>
