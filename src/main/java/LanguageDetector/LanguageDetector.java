@@ -115,54 +115,6 @@ public class LanguageDetector {
 
     }
 
-
-
-//
-//    public void findMethodCalls() {
-//        ArrayList<String> methodCalls = new ArrayList<>();
-//        Pattern getFunctionCalls = Pattern.compile("(([a-z0-9<>\\.\\[\\]])+?)\\s*(\\()(([a-z0-9<>\\-\\.\\,\\+\\/\\[\\\\\\]()\\s\"\'])*)(\\))", Pattern.MULTILINE | Pattern.COMMENTS);
-//        Matcher functionCallMatcher = getFunctionCalls.matcher(code);
-//        while (functionCallMatcher.find()) {
-//            methodCalls.add(functionCallMatcher.group());
-//        }
-//        StringBuilder methodsFound = new StringBuilder();
-//        for (String method : methodCalls) {
-////            System.out.println(method);
-//            methodsFound.append(method + "\n");
-//        }
-//        String allMethods = methodsFound.toString();
-////        System.out.println("ALLMETHODS");
-////        System.out.println(allMethods); (([a-z0-9<>\.\[\]])*?)\s*(\()
-//
-////        System.out.println("aaa");
-//        System.out.println("First method call list" + allMethods);
-//        Pattern getInnerFunctions = Pattern.compile("(\\(([a-z0-9<>\\-\\.\\,\\+\\/\\s\\[\\\\\\]()\"'])*?)\\s*(\\()(([a-z0-9<>\\-\\.\\,\\+\\/\\s*\\[\\\\\\]()\"'])*?)(\\))", Pattern.MULTILINE | Pattern.COMMENTS);
-//        Matcher innerFunctionMatcher = getInnerFunctions.matcher(code);
-//        ArrayList<String> secondCalls = new ArrayList<>();
-//        System.out.println("------------------------------------");
-//
-//        while (innerFunctionMatcher.find()) {
-//            String innerCall = innerFunctionMatcher.group();
-//            Matcher getFunc = getFunctionCalls.matcher(innerCall);
-//            while (getFunc.find()) {
-//
-//                secondCalls.add(getFunc.group());
-//            }
-//
-//        }
-//        System.out.println("Inner method calls list");
-//        for (String secondCall : secondCalls) {
-//            System.out.println(secondCall);
-//
-//        }
-//        System.out.println("Total amount of methods found: " + (methodCalls.size() + secondCalls.size()));
-//        System.out.println("------------------------------------");
-//
-//
-//    }
-//}
-//
-
     public void alphabetCounter() {
         ArrayList language = new ArrayList<>();
         ArrayList chars = new ArrayList<>();
@@ -185,7 +137,7 @@ public class LanguageDetector {
             while (matcher.find()) {
                 letterCount[l]++;
             }
-            System.out.print("\n" + letterCount[l]); //todo weghalen?
+            System.out.print("\n" + letterCount[l]);
 
         }
 
@@ -214,7 +166,7 @@ public class LanguageDetector {
 
         System.out.println("------------------------------------");
 
-        System.out.println("Totalletters: " + total); //todo weghalen?
+        System.out.println("Total letters: " + total);
 
 
 
@@ -264,7 +216,9 @@ public class LanguageDetector {
 
             for (int j = 0;  j < langsize; j++) {
                 if (englishFreq.get(listCount) != language.get(listCount)){
-                    System.out.printf("JavaDoc is not written in English. Too bad.");
+                    System.out.printf("Javadoc is not written in English. Too bad.");
+                } else {
+                    System.out.println("\n\n\n\n\n\n\n\n\nThe javadoc is written in english, luckily.");
                 }
             }
 
@@ -273,45 +227,7 @@ public class LanguageDetector {
         }
 
 
-//        System.out.println("Total amount of letters: "+totalLetters);
-//        LanguageList langTemp = new LanguageList();
-//        LanguageList langFinal = new LanguageList();
-//
-//      System.out.println("------------------------------------");
-//
-//        ArrayList<LanguageLetters> toRemove = new ArrayList<>();
-//        //while there are languageList left
-//        int listCounter = 0;
-//        int langsize = languageList.size();
-//        while (toRemove.size() < langsize) {
-//            for (LanguageLetters language : languageList) {
-//                if (language.getLetters().charAt(listCounter) != lettersInCountingOrder.charAt(listCounter)) {
-//                    System.out.println("Next letter is: " + lettersInCountingOrder.charAt(listCounter));
-//                    System.out.println("removing " + language.getLanguage());
-//                    toRemove.add(language);
-//                }
-//            }
-//            //Copies language list with entries inside of it into the final list
-//            finalList.clear();
-//            finalList.addAll(languageList);
-//
-//            languageList.removeAll(toRemove);
-//
-//            listCounter++;
-//            if (languageList.size() < 1) {
-//                System.out.println("------------------------------------");
-//
-//                System.out.println("Languages left: ");
-//                for (LanguageLetters language : finalList) {
-//                    System.out.println(language.getLanguage());
-//                }
-//                break;
-//            }
-//        }
-
     }
 
 
 }
-//a = 97
-//z = 122
